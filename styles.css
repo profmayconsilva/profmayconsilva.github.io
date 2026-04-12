@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+/* Suas Variáveis Originais */
+:root {
+    --color-green: #65C5B1;
+    --color_blue: #0F0F1A;
+    --color_purple: #915FA8;
+
+    --font_weight: 500;
+    --font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    /* Variáveis de suporte para o layout */
+    --text-dark: #333333;
+    --text-light: #F8F9FA;
+    --bg-light: #F4F7F6;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-weight: var(--font_weight);
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--color_blue);
+    color: var(--text-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .logo > img {
+    width: 100px;
+}
+
+
+
+.navbar nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--color-green);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--color_blue) 0%, #1a1a2e 100%);
+    color: var(--text-light);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.btn-primary {
+    background-color: var(--color-green);
+    color: var(--color_blue);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #52a896;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(101, 197, 177, 0.4);
+}
+
+/* Seções Gerais */
+section {
+    padding: 80px 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--color_blue);
+    font-weight: 700;
+}
+
+/* Sobre */
+.sobre p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Disciplinas (Cards) */
+.disciplinas {
+    background-color: #ffffff;
+}
+
+.cards-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--bg-light);
+    padding: 40px 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s, border-bottom 0.3s;
+    border-bottom: 4px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-bottom: 4px solid var(--color_purple);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--color_purple);
+}
+
+.card h3 {
+    color: var(--color_purple);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+/* Contato / Footer */
+.contato {
+    background-color: var(--color_blue);
+    color: var(--text-light);
+    text-align: center;
+    padding: 60px 0 20px;
+}
+
+.contato h2 {
+    color: var(--text-light);
+}
+
+.contact-info {
+    margin: 30px 0;
+    font-size: 1.2rem;
+}
+
+.contact-info a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.contact-info a:hover{
+    color: var(--color-green);
+}
+
+.copyright {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
